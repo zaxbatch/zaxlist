@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+	<script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+	<script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<title>ZaxWebApp</title>
+</head>
+<body>
+	<div id="menu">
+		<a href="/">Home</a>
+		<a href="signIn.html">Sign In</a>
+		<a href="register.html">Register</a>
+		<a href="/" onclick="bye(event)">Logout</a>
+	</div>
+	<div id="members-area">
+		<h1>Members Only</h1>
+	</div>
+	<hr />
+	<div id="logged-out">
+		<h2>Please <a href="/signIn.html">Login</a>/<a href="/register.html">Register</a> to view this content</h2>
+	</div>
+	<div id="logged-in">
+		<h2>Add Task</h2>
+		<form onsubmit="addTask(event)" id="task-form">
+			<label>Task</label>
+			<br /><br />
+			<input type="text" name="task" id="task" />
+			<br /><br />
+			<label>Description</label>
+			<br /><br />
+			<textarea name="description" id="description" ></textarea>
+			<br /><br />
+			<label>Due</label>
+			<br /><br />
+			<input type="date" name="date" id="date" />
+			<br /><br />
+			<button type="submit">Add</button>
+		</form>
+	</div>
+
+
+	<script defer src="js/firebase.js"></script>
+	<script defer src="js/addTask.js"></script>
+
+
+</body>
+</html>
