@@ -13,8 +13,8 @@
 <body>
 	<div id="menu">
 		<a href="/">Home</a>
-		<a href="signIn.html">Sign In</a>
-		<a href="register.html">Register</a>
+		<a href='/signin'>Sign In</a>
+		<a href='/register'>Register</a>
 		<a href="/" onclick="bye(event)">Logout</a>
 	</div>
 	<div id="members-area">
@@ -22,14 +22,14 @@
 	</div>
 	<hr />
 	<div id="logged-out">
-		<h2>Please <a href="/signIn.html">Login</a>/<a href="/register.html">Register</a> to view this content</h2>
+		<h2>Please <a href='/signin'>Login</a>/<a href='/register'>Register</a> to view this content</h2>
 	</div>
 	<div id="logged-in">
 		<h2>Add Task</h2>
 		<form onsubmit="addTask(event)" id="task-form">
 			<label>Task</label>
 			<br /><br />
-			<input type="text" name="task" id="task" />
+			<input type="text" name="task" id="task" required />
 			<br /><br />
 			<label>Description</label>
 			<br /><br />
@@ -41,6 +41,11 @@
 			<br /><br />
 			<button type="submit">Add</button>
 		</form>
+		<hr />
+		<h2>To Do...</h2>
+		<div id="task-list">
+
+		</div>
 	</div>
 
 
